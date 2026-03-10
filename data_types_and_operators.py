@@ -9,6 +9,7 @@ if __name__ == '__main__': # main function
     c = 81
     d = 0
     e = 0
+    f = 0
     
     # defining float variables
     x_float = 2.0
@@ -33,6 +34,9 @@ if __name__ == '__main__': # main function
     
     d = c % a # modulo(remainder)
     print(d)
+    
+    f = 2**3 # exponent
+    print(f)
     
     e = c // a # integer division, rounds down to nearest integer
     print(e)
