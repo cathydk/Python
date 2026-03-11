@@ -73,7 +73,7 @@ if __name__ == '__main__':
     
     ###########################################################SETS######################################################
     # Set is a data type for mutable unordered collections of unique elements
-    # unordered fo there isn't a last element
+    # unordered so there isn't a last element
     # operations you can perform with sets include mathematical sets
     # methods like union, intersection, and difference are easy to perform with sets
     num_set = set(num_list)
