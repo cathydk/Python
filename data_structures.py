@@ -109,7 +109,7 @@ if __name__ == '__main__':
     # IDENTITY OPERATORS
     # is: evaluates if both sides have the same identity
     # is not: evaluates if both sides have different identities
-    x = elements.get('dilithium') # checks if a KEYreturns None with the is operator
+    x = elements.get('dilithium') # checks if a KEY returns None with the is operator
     is_null = x is None
     print(is_null)
     non_null = x is not None
