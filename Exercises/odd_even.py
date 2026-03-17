@@ -33,4 +33,4 @@ if __name__ == '__main__':
             is_valid_input = True
         # user did not input an integer value
         except ValueError:
-            print('You did not enter a number, please enter a number: ')
+            print('You did not enter a number, try again')
