@@ -24,6 +24,7 @@ if __name__ == '__main__':
         # handling invalid input
         try:
             # try to convert string to int if possible
+            # if can't convert string to int then program will jump to except ValueError
             user_input_int = int(user_input_string)
             # checking to see if user input is odd or even
             if user_input_int%2 == 0:
