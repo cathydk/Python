@@ -7,7 +7,7 @@ Count how many words are in it
 
 👉 Challenge: Also count how many times each word appears'''
 
-# to count frequenct of word in list
+# to count frequency of word in list
 from collections import Counter
 
 if __name__ == '__main__':
@@ -20,7 +20,6 @@ if __name__ == '__main__':
     
     # use split method to convert user string to a list with each word as an item
     words = user_input.split()
-    print(words)
     
     # the length of the words list is the amount of words in the sentence
     count = len(words)
