@@ -28,6 +28,7 @@ if __name__ == '__main__':
     print('There are {} words in your sentence'.format(count))
     
     # count frequency of words in sentence
+    # pass words list as a parameter to Counter
     # Counter returns a dictionary-like object where keys are the words and values are their counts
     word_count = Counter(words)
     print(word_count)
