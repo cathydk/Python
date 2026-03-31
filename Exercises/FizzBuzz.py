@@ -25,8 +25,8 @@ if __name__ == '__main__':
 
     # loop through the range the user inputted
     # start = min_range
-    # stop = max_range
-    for i in range(min_range, max_range):
+    # stop = max_range+1 to include the max input, otherwise it would be one off
+    for i in range(min_range, max_range+1):
         print(i)
         if i % 3 == 0 and i % 5 == 0:
             print('FizzBuzz')
