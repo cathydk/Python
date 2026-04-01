@@ -17,10 +17,10 @@ if __name__ == '__main__':
     # to check if password has number and special character
     has_num = False
     has_special = False
-    special_chars = '!@#$%^&*()'
+    special_chars = '!@#$%^&*()-_+=`~:;<>?'
     
     # let user know what the program does
-    print('Password Strenth Checker')
+    print('Password Strength Checker')
 
     # get user input
     user_input = input('Please enter in a password and I will let you know if it is strong or weak: ')
