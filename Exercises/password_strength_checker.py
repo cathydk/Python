@@ -44,13 +44,13 @@ if __name__ == '__main__':
     input_size = len(user_input)
 
     # let user know what is missing in password
+    if input_size >= 8 and has_num == True and has_special == True:
+        print('Strong')
+    else:
+        print('Weak')
     if input_size < 8:
         print('Password is shorter than 8 characters')
     if has_num == False:
         print('Missing number')
     if has_special == False:
         print('Missing special character')
-    if input_size >= 8 and has_num == True and has_special == True:
-        print('Strong')
-    else:
-        print('Weak')
