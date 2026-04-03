@@ -47,10 +47,14 @@ if __name__ == '__main__':
                 if update == 'yes':
                     new_number = input('What is the new number: ')
                     # update new number
+                    # insert a new value (new_number)
                     contacts[name] = new_number
                 elif update == 'no':
+                    # printing out dictionary
                     print(contacts)
+            # name isn't already in contacts
             else:
+                # insert new value (number)
                 # dictionary[key] = value
                 contacts[name] = number
         # viewing all contacts
