@@ -39,6 +39,7 @@ if __name__ == '__main__':
     while True:
         # get user input on what they would like to do
         # user_input is a string
+        # this has to be in the loop or the option the user chooses will be in an infinite loop***************************************************
         user_input = input('Please choose an option (EX. 1, 2, or 3...): ')
 
         # user input is 1
