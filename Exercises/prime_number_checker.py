@@ -93,3 +93,25 @@ if __name__ == '__main__':
         
         # after checking and printing if prime the current num, the outer loop increments num and repeats the process.
         # inner loop starts again for the new num
+
+'''
+Prime Number Checker Timeline (user_input = 10)
+
+Outer Loop num | int(√num) | Inner Loop i Values   | Condition (num % i == 0)                 | is_prime | Action
+---------------|------------|----------------------|------------------------------------------|----------|-------
+2              | 1          | — (range(2,2) empty) | —                                        | True     | Print 2 ✔
+3              | 1          | — (range(2,2) empty) | —                                        | True     | Print 3 ✔
+4              | 2          | 2                    | 4 % 2 == 0 ✅                           | False    | Break → Do not print
+5              | 2          | 2                    | 5 % 2 != 0 ❌                           | True     | Print 5 ✔
+6              | 2          | 2                    | 6 % 2 == 0 ✅                           | False    | Break → Do not print
+7              | 2          | 2                    | 7 % 2 != 0 ❌                           | True     | Print 7 ✔
+8              | 2          | 2                    | 8 % 2 == 0 ✅                           | False    | Break → Do not print
+9              | 3          | 2, 3                 | 2: 9 % 2 != 0 ❌ <br> 3: 9 % 3 == 0 ✅ | False     | Break → Do not print
+10             | 3          | 2, 3                 | 2: 10 % 2 == 0 ✅                       | False    | Break → Do not print
+
+Notes:
+- int(√num) is the upper bound of the inner loop.
+- Inner loop checks divisibility for i in range(2, int(√num)+1)
+- Break stops the inner loop immediately when a divisor is found.
+- If no divisors found, is_prime remains True → number is printed.
+'''
