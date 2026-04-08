@@ -37,6 +37,7 @@ if __name__ == '__main__':
         if user_input%i == 0:
             # so not prime
             is_prime = False
+            # since already found a number that isn't prime, no need to continue
             break
         else:
             # has a remainder so not divisible
