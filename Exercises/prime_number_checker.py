@@ -33,7 +33,7 @@ if __name__ == '__main__':
     #     after sqrt(n), pairs repeat in reverse (9×4, 12×3, ...), so only check up to sqrt(n)
     # +1 to include boundary**************************************
     for i in range(2, int(user_input**0.5) + 1):
-        # user_input is divisible by something other than 1 since it doesn't have a remainder
+        # user_input is divisible by something other than 1 since it doesn't have a remainder^^^^^
         if user_input%i == 0:
             # so not prime
             is_prime = False
@@ -50,6 +50,7 @@ if __name__ == '__main__':
         print('{} is a prime number'.format(user_input))
 
     # print all prime numbers up to user_input
+    # the upper bound of the outer loop is always n and the upper bound for the inner loop is n**0.5
     for num in range(2, user_input + 1):
         # -------------------------------
         # Step 1: Loop through all numbers from 2 up to the user input
@@ -71,6 +72,8 @@ if __name__ == '__main__':
         # -------------------------------
         for i in range(2, int(num**0.5) + 1):
             # Step 3a: Check if num is divisible by i
+            # doing num % i because we want to find all the prime numbers up until the user_input**************************************
+            # num goes all the way of to user_input, same concept as above, but with more numbers^^^^^
             if num % i == 0:
                 # If divisible, num has a factor other than 1 and itself
                 # Therefore, it's not prime
@@ -81,7 +84,12 @@ if __name__ == '__main__':
         # -------------------------------
         # Step 4: If no divisors were found, num is prime
         # -------------------------------
+        # only after the inner loop finishes, the program moves to this if statement
+        # this check happens once per number num
         if is_prime:
             # Print the prime number
             # end=" " keeps all primes on the same line separated by spaces
             print(num, end=" ")
+        
+        # after checking and printing if prime the current num, the outer loop increments num and repeats the process.
+        # inner loop starts again for the new num
