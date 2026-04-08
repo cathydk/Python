@@ -49,18 +49,38 @@ if __name__ == '__main__':
         print('{} is a prime number'.format(user_input))
 
     # print all prime numbers up to user_input
-    # loop through all numbers from 2 to user_input
-    # +1 to include boundary
     for num in range(2, user_input + 1):
-        # assume True at first
-        is_prime = True
+        # -------------------------------
+        # Step 1: Loop through all numbers from 2 up to the user input
+        # 2 is the first prime number, so we start here
+        # range() goes up to user_input + 1 because the upper bound is exclusive
+        # -------------------------------
 
-        # check if num is prime using sqrt optimization
+        # Step 2: Assume the current number is prime
+        is_prime = True
+        # We start with True and will try to prove it False if we find a divisor
+
+        # -------------------------------
+        # Step 3: Check for divisors using sqrt optimization
+        # We only need to check divisors from 2 up to sqrt(num)
+        # Why? Because factors come in pairs, e.g. for 36: 
+        # 1×36, 2×18, 3×12, 4×9, 6×6
+        # After sqrt(36)=6, factor pairs just repeat in reverse (9×4, 12×3, ...)
+        # So no need to check beyond sqrt(num) → more efficient
+        # -------------------------------
         for i in range(2, int(num**0.5) + 1):
+            # Step 3a: Check if num is divisible by i
             if num % i == 0:
+                # If divisible, num has a factor other than 1 and itself
+                # Therefore, it's not prime
                 is_prime = False
+                # No need to check further, we can stop the inner loop
                 break
 
-        # if still prime, print it
+        # -------------------------------
+        # Step 4: If no divisors were found, num is prime
+        # -------------------------------
         if is_prime:
+            # Print the prime number
+            # end=" " keeps all primes on the same line separated by spaces
             print(num, end=" ")
