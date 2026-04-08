@@ -72,7 +72,7 @@ if __name__ == '__main__':
         # -------------------------------
         # when the inner for loop breaks i starts from the beginning again
         # When the inner loop breaks, It stops immediately for that num, Control goes back to the outer loop to pick the next num
-        # Next iteration of the outer loop, A new inner loop starts for the new num, i always starts again from 2 for this new number
+        # Next iteration of the outer loop, A new inner loop starts for the new num, i always starts again from 2 for this new number**************************************
         # ✅ Important: i does not continue from the previous number. Every time the outer loop moves to a new num, the inner loop always starts fresh at 2
         for i in range(2, int(num**0.5) + 1):
             # Step 3a: Check if num is divisible by i
@@ -119,7 +119,7 @@ if __name__ == '__main__':
                     |
                     v
             Back to Outer Loop → next num
-            (i always starts at 2 for new num)
+            (i always starts at 2 for new num)**************************************
         """
 
         # -------------------------------
