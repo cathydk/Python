@@ -70,6 +70,10 @@ if __name__ == '__main__':
         # After sqrt(36)=6, factor pairs just repeat in reverse (9×4, 12×3, ...)
         # So no need to check beyond sqrt(num) → more efficient
         # -------------------------------
+        # when the inner for loop breaks i starts from the beginning again
+        # When the inner loop breaks, It stops immediately for that num, Control goes back to the outer loop to pick the next num
+        # Next iteration of the outer loop, A new inner loop starts for the new num, i always starts again from 2 for this new number
+        # ✅ Important: i does not continue from the previous number. Every time the outer loop moves to a new num, the inner loop always starts fresh at 2
         for i in range(2, int(num**0.5) + 1):
             # Step 3a: Check if num is divisible by i
             # doing num % i because we want to find all the prime numbers up until the user_input**************************************
@@ -80,6 +84,43 @@ if __name__ == '__main__':
                 is_prime = False
                 # No need to check further, we can stop the inner loop
                 break
+        '''Outer loop picks a num.
+            Inner loop starts with i = 2.
+            If num is divisible by i, break → inner loop ends immediately → move to next num.
+            If num is not divisible, i increments until i > sqrt(num) → then inner loop ends → number is prime → print.
+            For each new num, the inner loop always starts at i = 2 again'''
+        
+        """
+            Prime Number Checker – Detailed Flow (prints primes up to user_input)
+
+            Outer Loop (num = 2 → user_input)
+                |
+                v
+            Set num
+                |
+                v
+            Inner Loop (i = 2 → int(sqrt(num)))
+                    |
+                    v
+            Check: num % i == 0 ?
+                    / \
+                /   \
+                Yes     No
+                /        \
+            is_prime=False  i increments by 1
+            Break → inner loop ends
+                    |
+                    v
+            After inner loop ends:
+            if is_prime == True:
+                Print num (prime)
+            else:
+                Do not print
+                    |
+                    v
+            Back to Outer Loop → next num
+            (i always starts at 2 for new num)
+        """
 
         # -------------------------------
         # Step 4: If no divisors were found, num is prime
