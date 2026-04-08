@@ -47,3 +47,20 @@ if __name__ == '__main__':
         print('{} is not a prime number'.format(user_input))
     if is_prime == True:
         print('{} is a prime number'.format(user_input))
+
+    # print all prime numbers up to user_input
+    # loop through all numbers from 2 to user_input
+    # +1 to include boundary
+    for num in range(2, user_input + 1):
+        # assume True at first
+        is_prime = True
+
+        # check if num is prime using sqrt optimization
+        for i in range(2, int(num**0.5) + 1):
+            if num % i == 0:
+                is_prime = False
+                break
+
+        # if still prime, print it
+        if is_prime:
+            print(num, end=" ")
