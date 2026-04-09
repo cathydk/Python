@@ -104,7 +104,7 @@ if __name__ == '__main__':
                     v
             Check: num % i == 0 ?
                     / \
-                /   \
+                   /   \
                 Yes     No
                 /        \
             is_prime=False  i increments by 1
