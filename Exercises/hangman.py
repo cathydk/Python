@@ -60,7 +60,7 @@ if __name__ == '__main__':
             else:
                 # display _ if character is not in letters_guessed (user guessed incorrectly)
                 print('_', end = ' ')
-        # tp put a new line
+        # to put a new line
         print(' ') 
         # check if all letters have been guessed*******************************
         # set all_guessed to True initially
