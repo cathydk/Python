@@ -76,3 +76,41 @@ if __name__ == '__main__':
         if all_guessed:
             print('You guessed the word!')
             break
+
+
+'''import random
+
+if __name__ == '__main__':
+
+    words = ['apple', 'carrot', 'banana', 'celery', 'cheese', 'strawberry', 'blueberry' ]
+    letters_guessed = []
+    word = random.choice(words)
+
+    print('Hangman')
+    print('=======')
+    print('You have 10 tries to guess the word')
+
+    for char in word:
+        print('_', end = ' ')
+    
+    print('')
+
+    for i in range(10):
+        print(' ')
+        print('These are the letters that you have guessed so far: {}'.format(letters_guessed))
+        user_input = input('Choose a letter: ')
+        letters_guessed.append(user_input)
+        for char in word:
+            if char in letters_guessed:
+                print(char, end = ' ')
+            else:
+                print('_', end = ' ')
+        print(' ') 
+        all_guessed = True
+        for char in word:
+            if char not in letters_guessed:
+                all_guessed = False
+                break
+        if all_guessed:
+            print('You guessed the word!')
+            break'''
