@@ -158,3 +158,39 @@ Notes:
 - Break stops the inner loop immediately when a divisor is found.
 - If no divisors found, is_prime remains True → number is printed.
 '''
+
+
+"""
+if __name__ == '__main__':
+
+    is_prime = True
+
+    user_input = int(input('Please enter in a number, I will check if it is a prime number: '))
+
+    if user_input == 1:
+        is_prime = False
+
+    for i in range(2, int(user_input**0.5) + 1):
+        if user_input % i == 0:
+            is_prime = False
+            break
+        else:
+            is_prime = True
+
+    if is_prime == False:
+        print('{} is not a prime number'.format(user_input))
+    if is_prime == True:
+        print('{} is a prime number'.format(user_input))
+
+    for num in range(2, user_input + 1):
+
+        is_prime = True
+
+        for i in range(2, int(num**0.5) + 1):
+            if num % i == 0:
+                is_prime = False
+                break
+
+        if is_prime:
+            print(num, end=" ")
+"""
