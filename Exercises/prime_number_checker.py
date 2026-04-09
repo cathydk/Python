@@ -77,7 +77,7 @@ if __name__ == '__main__':
         for i in range(2, int(num**0.5) + 1):
             # Step 3a: Check if num is divisible by i
             # doing num % i because we want to find all the prime numbers up until the user_input**************************************
-            # num goes all the way of to user_input, same concept as above, but with more numbers^^^^^
+            # num goes all the way of to user_input, same concept as above, but with a range of numbers^^^^^
             if num % i == 0:
                 # If divisible, num has a factor other than 1 and itself
                 # Therefore, it's not prime
