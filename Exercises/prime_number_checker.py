@@ -150,6 +150,8 @@ Outer Loop num | int(√num) | Inner Loop i Values   | Condition (num % i == 0) 
 9              | 3          | 2, 3                 | 2: 9 % 2 != 0 ❌ <br> 3: 9 % 3 == 0 ✅ | False     | Break → Do not print
 10             | 3          | 2, 3                 | 2: 10 % 2 == 0 ✅                       | False    | Break → Do not print
 
+USE num = 9 TO HELP TRACE CODE, IT HELPS THE CODE MAKES SENSE
+
 Notes:
 - int(√num) is the upper bound of the inner loop.
 - Inner loop checks divisibility for i in range(2, int(√num)+1)
