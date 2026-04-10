@@ -25,6 +25,8 @@ if __name__ == '__main__':
 
     # dictionary to hold category and how much spent
     tracker = {}
+    # list (value) to hold how much user spent
+    expense = []
 
     # let user know what program does
     print('Expense Tracker')
@@ -40,10 +42,12 @@ if __name__ == '__main__':
         # go through dictionary and only add categories that haven't been added
         for key, value in tracker.items():
             if key in tracker:
-                add_amount = list(int(input('This category already exist, enter in how much you spent: ')))
-                tracker[category] = add_amount
+                add_amount = int(input('This category already exist, enter in how much you spent: '))
+                expense.append(add_amount)
+                tracker[category] = expense
         # get amount spent from user
-        amount_spent = list(int(input('Enter in how much you spent: ')))
+        amount_spent = int(input('Enter in how much you spent: '))
+        expense.append(amount_spent)
         # add the user input to the dictionary; category = key, amount_spent = value
-        tracker[category] = amount_spent
+        tracker[category] = expense
         print(tracker)
