@@ -25,8 +25,6 @@ if __name__ == '__main__':
 
     # dictionary to hold category and how much spent
     tracker = {}
-    # list (value) to hold how much user spent************************
-    expense = []
 
     # let user know what program does
     print('Expense Tracker')
@@ -43,24 +41,39 @@ if __name__ == '__main__':
 
         # get what user chooses in the option menu
         user_choice = input('Choose an option: ')
+        
         if user_choice == '1':
             # add an expense
             category = input('Enter in a category: ')
             # get amount spent from user************************
             amount_spent = int(input('Enter in how much you spent: '))
-            expense.append(amount_spent)
-            # add the user input to the dictionary; category = key, expense = value************************
-            tracker[category] = expense
+            amount_value = [amount_spent]
+            tracker[category] = amount_value
+
+            if category not in tracker:
+                # add an expense
+                category = input('Enter in a category: ')
+                # get amount spent from user************************
+                amount_spent = int(input('Enter in how much you spent: '))
+                amount_value = [amount_spent]
+                tracker[category] = amount_value
+            else:
+                exist = int(input('already exist, enter in amount'))
+                amount_value.append(exist)
+
         elif user_choice == '2':
             # calculate total spending
-            print('Total spending: {}'.format(sum(expense)))
+            print('Total spending: {}'.format(sum(tracker[category])))
         elif user_choice == '3':
             # show spending by category
             print(tracker)
-        '''elif user_choice == '4':
-            # 
+        elif user_choice == '4':
+            # show which category has the highest spending
+            print(tracker)
         elif user_choice == '5':
-            # 
+            # delete an expense
+            print(tracker)
+            delete_expense = input('What value would you like to delete: ')
         elif user_choice == '6':
             # user wants to quit
-            break'''
+            break
