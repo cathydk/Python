@@ -43,27 +43,24 @@ if __name__ == '__main__':
 
         # get what user chooses in the option menu
         user_choice = input('Choose an option: ')
-
-        '''# get category from user
-        category = input('Enter in a category: ')
-        # get amount spent from user************************
-        amount_spent = int(input('Enter in how much you spent: '))
-        expense.append(amount_spent)
-        # add the user input to the dictionary; category = key, expense = value************************
-        tracker[category] = expense
-
-        # go through dictionary and only add categories that haven't been added
-        for key, values in tracker.items():
-            # get category from user
+        if user_choice == '1':
+            # add an expense
             category = input('Enter in a category: ')
-            if key in tracker:
-                add_amount = int(input('This category already exist, enter in how much you spent: '))
-                expense.append(add_amount)
-                tracker[category] = expense
-            else:
-                # get amount spent from user
-                amount_spent = int(input('Enter in how much you spent: '))
-                expense.append(amount_spent)
-                # add the user input to the dictionary; category = key, amount_spent = value
-                tracker[category] = expense
-        print(tracker)'''
+            # get amount spent from user************************
+            amount_spent = int(input('Enter in how much you spent: '))
+            expense.append(amount_spent)
+            # add the user input to the dictionary; category = key, expense = value************************
+            tracker[category] = expense
+        elif user_choice == '2':
+            # calculate total spending
+            print('Total spending: {}'.format(sum(expense)))
+        elif user_choice == '3':
+            # show spending by category
+            print(tracker)
+        '''elif user_choice == '4':
+            # 
+        elif user_choice == '5':
+            # 
+        elif user_choice == '6':
+            # user wants to quit
+            break'''
