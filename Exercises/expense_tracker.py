@@ -40,10 +40,10 @@ if __name__ == '__main__':
         # go through dictionary and only add categories that haven't been added
         for key, value in tracker.items():
             if key in tracker:
-                add_amount = int(input('This category already exist, enter in how much you spent: '))
+                add_amount = list(int(input('This category already exist, enter in how much you spent: ')))
                 tracker[category] = add_amount
         # get amount spent from user
-        amount_spent = int(input('Enter in how much you spent: '))
+        amount_spent = list(int(input('Enter in how much you spent: ')))
         # add the user input to the dictionary; category = key, amount_spent = value
         tracker[category] = amount_spent
         print(tracker)
