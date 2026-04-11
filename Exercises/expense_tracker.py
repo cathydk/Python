@@ -41,33 +41,37 @@ if __name__ == '__main__':
 
         # get what user chooses in the option menu
         user_choice = input('Choose an option: ')
-        
+
         if user_choice == '1':
             # add an expense
             category = input('Enter in a category: ')
-            # get amount spent from user************************
+            # get amount spent from user
             amount_spent = int(input('Enter in how much you spent: '))
-            amount_value = [amount_spent]
-            tracker[category] = amount_value
 
             if category not in tracker:
-                # add an expense
-                category = input('Enter in a category: ')
-                # get amount spent from user************************
-                amount_spent = int(input('Enter in how much you spent: '))
-                amount_value = [amount_spent]
-                tracker[category] = amount_value
+                # category not in dictionary yet, so add it to dictionary*****************************
+                tracker[category] = [amount_spent]
             else:
-                exist = int(input('already exist, enter in amount'))
-                amount_value.append(exist)
+                # category in dictionary, so append amount_spent to key which is a list*****************************
+                tracker[category].append(amount_spent)
 
         elif user_choice == '2':
             # calculate total spending
-            print('Total spending: {}'.format(sum(tracker[category])))
+            total = 0
+
+            # loop through each category in dictionary
+            for category in tracker:
+                # sum(tracker[category]) adds all the number in the list for one category
+                # total = total + sum(tracker[category]) adds all the categories together*****************************
+                total = total + sum(tracker[category])
+
+            print('Total spending: {}'.format(total))
+
         elif user_choice == '3':
             # show spending by category
             print(tracker)
-        elif user_choice == '4':
+
+        elif user_choice == '4': # CONTINUE HERE!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! similar logic for adding all categories together
             # show which category has the highest spending
             print(tracker)
         elif user_choice == '5':
