@@ -50,6 +50,7 @@ if __name__ == '__main__':
 
             if category not in tracker:
                 # category not in dictionary yet, so add it to dictionary*****************************
+                # values is a list because [amount_spent]
                 tracker[category] = [amount_spent]
             else:
                 # category in dictionary, so append amount_spent to values which is a list*****************************
