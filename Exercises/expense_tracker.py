@@ -90,9 +90,63 @@ if __name__ == '__main__':
             delete_expense_category = input('What category would you like to go to: ')
             # value
             delete_expense = int(input('What expense would you like to delete: '))
-            # remove specified amount
+            # remove specified amount*****************************
             tracker[delete_expense_category].remove(delete_expense)
 
         elif user_choice == '6':
             # user wants to quit
             break
+
+'''if __name__ == '__main__':
+
+    tracker = {}
+
+    print('Expense Tracker')
+    print('---------------')
+    print('1. Add an expense')
+    print('2. Calculate total spending')
+    print('3. Show spending by category')
+    print('4. Show which category has the highest spending')
+    print('5. Delete an expense')
+    print('6. Quit')
+
+    while True:
+
+        user_choice = input('Choose an option: ')
+
+        if user_choice == '1':
+            category = input('Enter in a category: ')
+            amount_spent = int(input('Enter in how much you spent: '))
+
+            if category not in tracker:
+                tracker[category] = [amount_spent]
+            else:
+                tracker[category].append(amount_spent)
+
+        elif user_choice == '2':
+            total = 0
+
+            for category in tracker:
+                total = total + sum(tracker[category])
+
+            print('Total spending: {}'.format(total))
+
+        elif user_choice == '3':
+            print(tracker)
+
+        elif user_choice == '4':
+            highest = next(iter(tracker))
+
+            for key, values in tracker.items():
+                if sum(tracker[highest]) < sum(tracker[key]):
+                    highest = key
+
+            print('The category with the highest spending is {}'.format(highest))
+
+        elif user_choice == '5':
+            delete_expense_category = input('What category would you like to go to: ')
+            delete_expense = int(input('What expense would you like to delete: '))
+            tracker[delete_expense_category].remove(delete_expense)
+
+        elif user_choice == '6':
+            break'''
