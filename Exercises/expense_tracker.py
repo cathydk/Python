@@ -52,7 +52,7 @@ if __name__ == '__main__':
                 # category not in dictionary yet, so add it to dictionary*****************************
                 tracker[category] = [amount_spent]
             else:
-                # category in dictionary, so append amount_spent to key which is a list*****************************
+                # category in dictionary, so append amount_spent to values which is a list*****************************
                 tracker[category].append(amount_spent)
 
         elif user_choice == '2':
