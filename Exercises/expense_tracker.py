@@ -71,13 +71,28 @@ if __name__ == '__main__':
             # show spending by category
             print(tracker)
 
-        elif user_choice == '4': # CONTINUE HERE!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! similar logic for adding all categories together
+        elif user_choice == '4':
             # show which category has the highest spending
-            print(tracker)
+            # set first key to be the highest category*****************************
+            highest = next(iter(tracker))
+
+            # loop through dictionary
+            for key, values in tracker.items():
+                # compare the spending of each category (values)
+                if sum(tracker[highest]) < sum(tracker[key]):
+                    highest = key
+
+            print('The category with the highest spending is {}'.format(highest))
+
         elif user_choice == '5':
             # delete an expense
-            print(tracker)
-            delete_expense = input('What value would you like to delete: ')
+            # key
+            delete_expense_category = input('What category would you like to go to: ')
+            # value
+            delete_expense = int(input('What expense would you like to delete: '))
+            # remove specified amount
+            tracker[delete_expense_category].remove(delete_expense)
+
         elif user_choice == '6':
             # user wants to quit
             break
