@@ -90,7 +90,7 @@ if __name__ == '__main__':
             delete_expense_category = input('What category would you like to go to: ')
             # value
             delete_expense = int(input('What expense would you like to delete: '))
-            # remove specified amount*****************************
+            # remove specified amount from values which is a list*****************************
             tracker[delete_expense_category].remove(delete_expense)
 
         elif user_choice == '6':
