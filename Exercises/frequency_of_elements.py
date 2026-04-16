@@ -51,6 +51,7 @@ def count_frequency(items):
 
 
 # define function to find the most frequent element in list
+# elements is a list
 def most_frequent(elements):
     # call count_frequency(items) function
     # pass in elements list
