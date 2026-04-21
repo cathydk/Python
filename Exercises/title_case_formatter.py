@@ -61,3 +61,9 @@ Input: "the lord of the rings"
 Output: "The Lord of the Rings"
 ```
 '''
+
+def to_title_case(sentence):
+    beep = True
+
+def main():
+    user_sentence = input
