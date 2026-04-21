@@ -63,7 +63,24 @@ Output: "The Lord of the Rings"
 '''
 
 def to_title_case(sentence):
-    beep = True
+    formatted_sentence = ''
+    no_capitalize = ['and', 'the', 'of', 'in']
+    sentence_list = sentence.split()
+
+    for word in sentence_list:
+        if word not in no_capitalize:
+            formatted_sentence += word[0].upper()
+            formatted_sentence += word[1:].lower()
+            formatted_sentence += ' '
+        else:
+            formatted_sentence += word
+
+    return formatted_sentence
 
 def main():
-    user_sentence = input
+    user_sentence = input('Enter in a sentence: ')
+    formatted_title = to_title_case(user_sentence)
+    print(formatted_title)
+
+if __name__ == '__main__':
+    main()
