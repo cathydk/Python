@@ -71,7 +71,7 @@ import string
 # to sort dictionary by frequency (value)**************************************
 import operator
 
-# define function to find most common word is user sentence
+# define function to find most common word in user sentence
 # sentence is a string
 def most_common_word(sentence):
     # create dictionary to hold the words in sentence and the frequency that those words occur in sentence
