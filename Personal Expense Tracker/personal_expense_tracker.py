@@ -102,7 +102,7 @@ def total_spending(tracker):
 def main():
     # create dictionary to hold category and amount
     # category (string) = key
-    # amount (list of ints )= value
+    # amount (list of ints) = value
     tracker = {}
 
     while True:
