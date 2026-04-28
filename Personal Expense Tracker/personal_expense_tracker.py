@@ -16,7 +16,6 @@ Save data (optional but strong)
 
 🧠 Suggested Functions
 Structure your program like this:
-def category_total(tracker, category):
 def save_data(tracker):
 def load_data():
 
@@ -99,6 +98,16 @@ def total_spending(tracker):
     print('Total: {}'.format(total))
 
 '''----------------------------------------------------------------------------------------------------------------------------------------------------------------'''
+def category_total(tracker, category):
+    # to hold total category spending
+    total_per_category = 0
+
+    # sum(tracker[category]) adds all the number in the list for one category
+    total_per_category = sum(tracker[category])
+    # display total for current category
+    print('Total for {} category: {}'.format(category, total_per_category))
+
+'''----------------------------------------------------------------------------------------------------------------------------------------------------------------'''
 def main():
     # create dictionary to hold category and amount
     # category (string) = key
@@ -112,7 +121,8 @@ def main():
         print('1. Add Expense')
         print('2. View Expenses')
         print('3. Total Spending')
-        print('4. Exit')
+        print('4. Category Spending')
+        print('5. Exit')
 
         # get user input
         choice = input('Choose a number: ')
@@ -134,6 +144,13 @@ def main():
             total_spending(tracker)
         # if user inputted 4
         elif choice == '4':
+            # get category that user wants to see spending of
+            category = input('Enter category: ')
+            # calling category_total(tracker, category) function
+            # dictionary (tracker) and string (category) being passed in
+            category_total(tracker, category)
+        # if user inputted 5
+        elif choice == '5':
             # exit loop, program ends
             break
 
