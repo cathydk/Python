@@ -98,6 +98,7 @@ def total_spending(tracker):
     print('Total: {}'.format(total))
 
 '''----------------------------------------------------------------------------------------------------------------------------------------------------------------'''
+# define function to caclulate spending of specified category
 def category_total(tracker, category):
     # to hold total category spending
     total_per_category = 0
